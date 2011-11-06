@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'>
+
+  <Product Name='sakura editor （サクラエディタ）'
+           Id='4A042C56-3B68-4768-A08B-1EACD526BDB1'
+           UpgradeCode='F3BA9C9D-4450-4d82-8BDD-87E83D2E0BE1'
+           Language='1041' Codepage='932'
+           Version='2.0.3.1' Manufacturer='サクラエディタ開発チーム'>
+
+    <Package Id='*' Keywords='インストーラ'
+             Description="sakura editor(サクラエディタ) インストーラ"
+             Comments='サクラエディタ(旧称:テキストエディタ)は、「たけ(竹パンダ)」さんのテキストエディタSAKURAの公開ソース(2000/02/21付)を元に不具合修正および機能拡張を行ったものです。'
+             Manufacturer='サクラエディタ開発チーム' InstallerVersion='200'
+             Languages='1041' Compressed='yes' SummaryCodepage='932' />
+
+    <Media Id='1' Cabinet='sakura.cab' EmbedCab='yes' DiskPrompt='CD-ROM' />
+    <Property Id='DiskPrompt' Value="サクラエディタ インストーラ" />
+
+    <Property Id='ARPPRODUCTICON'>sakura.exe</Property>
+    <Property Id='ARPURLINFOABOUT'>http://sakura-editor.sourceforge.net/</Property>
+
+    <Directory Id='TARGETDIR' Name='SourceDir'>
+     <Directory Id='ProgramFilesFolder' Name='PFiles'>
+         <Directory Id='INSTALLDIR' Name='sakura'>
+
+            <Component Id='MainExecutable'
+                       Guid='BF5D075F-7D7A-46ea-B2E3-FE509676EEF6'>
+              <File Id='SakuraEXE'
+                    Name='sakura.exe' DiskId='1'
+                    Source='sakura.exe' KeyPath='yes'>
+                <Shortcut Id="startmenuSakura2031" Directory="SakuraMenuDir"
+                          Name="サクラエディタ" WorkingDirectory='INSTALLDIR'
+                          Icon="sakura.exe" IconIndex="0" Advertise="yes" />
+                <Shortcut Id="desktopSakura2031" Directory="DesktopFolder"
+                          Name="サクラエディタ" WorkingDirectory='INSTALLDIR'
+                          Icon="sakura.exe" IconIndex="0" Advertise="yes" />
+              </File>
+              <File Id='SakuraExeIni' Name='sakura.exe.ini' DiskId='1' Source='sakura.exe.ini' />
+              <File Id='SakuraExeManifest' Name='sakura.exe.manifest' DiskId='1' Source='sakura.exe.manifest' />
+              <File Id="LICENSE.rtf" Name="LICENSE.rtf" DiskId="1" Source="LICENSE.rtf" />
+            </Component>
+
+            <Component Id='RegexpLibrary'
+                       Guid='2C497A58-F649-4665-AA62-471389E7C717'>
+              <File Id='BregonigDLL' Name='bregonig.dll' DiskId='1'
+                    Source='bregonig.dll' KeyPath='yes' />
+              <File Id='BsdLicense' Name='bsd_license.txt' DiskId='1' Source='bsd_license.txt' />
+            </Component>
+
+            <Directory Id='KeywordDIR' Name='keyword'>
+              <Component Id='KeywordFiles'
+                       Guid='426ED976-877C-4b5e-A252-35A8284B3B95'>
+                <File Id="Abap4Kwd" Name="ABAP4.kwd" DiskId='1' Source='keyword/ABAP4.kwd' />
+                <File Id="ActionscriptKwd" Name="ActionScript.kwd" DiskId='1' Source='keyword/ActionScript.kwd' />
+                <File Id="AhkCol" Name="AHK.col" DiskId='1' Source='keyword/AHK.col' />
+                <File Id="AhkKhp" Name="AHK.khp" DiskId='1' Source='keyword/AHK.khp' />
+                <File Id="AhkRkw" Name="AHK.rkw" DiskId='1' Source='keyword/AHK.rkw' />
+                <File Id="AvisynthCol" Name="AviSynth.col" DiskId='1' Source='keyword/AviSynth.col' />
+                <File Id="AvisynthKwd" Name="AviSynth.kwd" DiskId='1' Source='keyword/AviSynth.kwd' />
+                <File Id="AvisynthOthersKwd" Name="AviSynth_Others.kwd" DiskId='1' Source='keyword/AviSynth_Others.kwd' />
+                <File Id="AvisynthPluginsKwd" Name="AviSynth_Plugins.kwd" DiskId='1' Source='keyword/AviSynth_Plugins.kwd' />
+                <File Id="AvisynthPropertiesKwd" Name="AviSynth_Properties.kwd" DiskId='1' Source='keyword/AviSynth_Properties.kwd' />
+                <File Id="AvisynthScriptKwd" Name="AviSynth_Script.kwd" DiskId='1' Source='keyword/AviSynth_Script.kwd' />
+                <File Id="AwkKwd" Name="awk.kwd" DiskId='1' Source='keyword/awk.kwd' />
+                <File Id="BatKhp" Name="bat.khp" DiskId='1' Source='keyword/bat.khp' />
+                <File Id="BatRl" Name="bat.rl" DiskId='1' Source='keyword/bat.rl' />
+                <File Id="BatchKwd" Name="batch.kwd" DiskId='1' Source='keyword/batch.kwd' />
+                <File Id="BatWin2kKhp" Name="bat_win2k.khp" DiskId='1' Source='keyword/bat_win2k.khp' />
+                <File Id="CcsCommandsKwd" Name="ccs_commands.kwd" DiskId='1' Source='keyword/ccs_commands.kwd' />
+                <File Id="CobolKwd" Name="COBOL.kwd" DiskId='1' Source='keyword/COBOL.kwd' />
+                <File Id="CorbaKwd" Name="corba.kwd" DiskId='1' Source='keyword/corba.kwd' />
+                <File Id="CppKwd" Name="cpp.kwd" DiskId='1' Source='keyword/cpp.kwd' />
+                <File Id="CsharpKwd" Name="csharp.kwd" DiskId='1' Source='keyword/csharp.kwd' />
+                <File Id="Css2GplTxt" Name="CSS2-GPL.txt" DiskId='1' Source='keyword/CSS2-GPL.txt' />
+                <File Id="Css2ReadmeTxt" Name="CSS2-readme.txt" DiskId='1' Source='keyword/CSS2-readme.txt' />
+                <File Id="Css2InputKwd" Name="CSS2.input.kwd" DiskId='1' Source='keyword/CSS2.input.kwd' />
+                <File Id="Css2Khp" Name="CSS2.khp" DiskId='1' Source='keyword/CSS2.khp' />
+                <File Id="Css2Kwd" Name="CSS2.kwd" DiskId='1' Source='keyword/CSS2.kwd' />
+                <File Id="DKwd" Name="d.kwd" DiskId='1' Source='keyword/d.kwd' />
+                <File Id="EcmascriptKwd" Name="ecmascript.kwd" DiskId='1' Source='keyword/ecmascript.kwd' />
+                <File Id="HspCol" Name="HSP.col" DiskId='1' Source='keyword/HSP.col' />
+                <File Id="HspKhp" Name="HSP.KHP" DiskId='1' Source='keyword/HSP.KHP' />
+                <File Id="HspKwd" Name="HSP.KWD" DiskId='1' Source='keyword/HSP.KWD' />
+                <File Id="HspOtl" Name="HSP.otl" DiskId='1' Source='keyword/HSP.otl' />
+                <File Id="HspRkw" Name="HSP.rkw" DiskId='1' Source='keyword/HSP.rkw' />
+                <File Id="HspRl" Name="HSP.RL" DiskId='1' Source='keyword/HSP.RL' />
+                <File Id="HtmlKwd" Name="html.kwd" DiskId='1' Source='keyword/html.kwd' />
+                <File Id="JavaKwd" Name="java.kwd" DiskId='1' Source='keyword/java.kwd' />
+                <File Id="JavascriptKwd" Name="JavaScript.kwd" DiskId='1' Source='keyword/JavaScript.kwd' />
+                <File Id="Mathml2Kwd" Name="mathml2.kwd" DiskId='1' Source='keyword/mathml2.kwd' />
+                <File Id="MovabletypeKwd" Name="movabletype.kwd" DiskId='1' Source='keyword/movabletype.kwd' />
+                <File Id="OptimaReadmeTxt" Name="optima-readme.txt" DiskId='1' Source='keyword/optima-readme.txt' />
+                <File Id="OptimaRkw" Name="optima.rkw" DiskId='1' Source='keyword/optima.rkw' />
+                <File Id="PascalKwd" Name="pascal.kwd" DiskId='1' Source='keyword/pascal.kwd' />
+                <File Id="PerlCol" Name="PERL.COL" DiskId='1' Source='keyword/PERL.COL' />
+                <File Id="PerlKwd" Name="Perl.kwd" DiskId='1' Source='keyword/Perl.kwd' />
+                <File Id="PerlRkw" Name="Perl.rkw" DiskId='1' Source='keyword/Perl.rkw' />
+                <File Id="PerlvarKwd" Name="Perlvar.kwd" DiskId='1' Source='keyword/Perlvar.kwd' />
+                <File Id="PhpKhp" Name="php.khp" DiskId='1' Source='keyword/php.khp' />
+                <File Id="PhpKwd" Name="PHP.KWD" DiskId='1' Source='keyword/PHP.KWD' />
+                <File Id="PicCcsCKwd" Name="PIC_CCS-C.kwd" DiskId='1' Source='keyword/PIC_CCS-C.kwd' />
+                <File Id="PicCcsCTxt" Name="PIC_CCS-C.txt" DiskId='1' Source='keyword/PIC_CCS-C.txt' />
+                <File Id="PliKwd" Name="pli.kwd" DiskId='1' Source='keyword/pli.kwd' />
+                <File Id="PlsqlKwd" Name="plsql.kwd" DiskId='1' Source='keyword/plsql.kwd' />
+                <File Id="PpaKwd" Name="PPA.KWD" DiskId='1' Source='keyword/PPA.KWD' />
+                <File Id="PpmckcCol" Name="ppmckc.col" DiskId='1' Source='keyword/ppmckc.col' />
+                <File Id="PpmckcRkw" Name="ppmckc.rkw" DiskId='1' Source='keyword/ppmckc.rkw' />
+                <File Id="PukiwikiReadmeTxt" Name="pukiwiki-readme.txt" DiskId='1' Source='keyword/pukiwiki-readme.txt' />
+                <File Id="PukiwikiCol" Name="pukiwiki.col" DiskId='1' Source='keyword/pukiwiki.col' />
+                <File Id="PukiwikiKwd" Name="pukiwiki.kwd" DiskId='1' Source='keyword/pukiwiki.kwd' />
+                <File Id="PukiwikiRkw" Name="pukiwiki.rkw" DiskId='1' Source='keyword/pukiwiki.rkw' />
+                <File Id="Python25Kwd" Name="python_2.5.kwd" DiskId='1' Source='keyword/python_2.5.kwd' />
+                <File Id="RtfKwd" Name="rtf.kwd" DiskId='1' Source='keyword/rtf.kwd' />
+                <File Id="RubyReadmeTxt" Name="Ruby-readme.txt" DiskId='1' Source='keyword/Ruby-readme.txt' />
+                <File Id="RubyCol" Name="Ruby.col" DiskId='1' Source='keyword/Ruby.col' />
+                <File Id="RubyHkn" Name="Ruby.hkn" DiskId='1' Source='keyword/Ruby.hkn' />
+                <File Id="RubyRkw" Name="Ruby.rkw" DiskId='1' Source='keyword/Ruby.rkw' />
+                <File Id="RubyRule" Name="Ruby.rule" DiskId='1' Source='keyword/Ruby.rule' />
+                <File Id="Ruby1Kwd" Name="Ruby1.kwd" DiskId='1' Source='keyword/Ruby1.kwd' />
+                <File Id="Ruby2Kwd" Name="Ruby2.kwd" DiskId='1' Source='keyword/Ruby2.kwd' />
+                <File Id="Ruby3Kwd" Name="Ruby3.kwd" DiskId='1' Source='keyword/Ruby3.kwd' />
+                <File Id="Ruby4Kwd" Name="Ruby4.kwd" DiskId='1' Source='keyword/Ruby4.kwd' />
+                <File Id="ShellKwd" Name="SHELL.kwd" DiskId='1' Source='keyword/SHELL.kwd' />
+                <File Id="Systemc201Kwd" Name="systemc_2_0_1.kwd" DiskId='1' Source='keyword/systemc_2_0_1.kwd' />
+                <File Id="SMacKwd" Name="S_MAC.KWD" DiskId='1' Source='keyword/S_MAC.KWD' />
+                <File Id="SMacppaDic" Name="S_MACPPA.DIC" DiskId='1' Source='keyword/S_MACPPA.DIC' />
+                <File Id="SMacppaKhp" Name="S_MACPPA.KHP" DiskId='1' Source='keyword/S_MACPPA.KHP' />
+                <File Id="TclKwd" Name="tcl.kwd" DiskId='1' Source='keyword/tcl.kwd' />
+                <File Id="TexKwd" Name="TeX.kwd" DiskId='1' Source='keyword/TeX.kwd' />
+                <File Id="TsqlKwd" Name="tsql.kwd" DiskId='1' Source='keyword/tsql.kwd' />
+                <File Id="Tsql2Kwd" Name="tsql2.kwd" DiskId='1' Source='keyword/tsql2.kwd' />
+                <File Id="TtlKhp" Name="TTL.KHP" DiskId='1' Source='keyword/TTL.KHP' />
+                <File Id="TtlKwd" Name="TTL.KWD" DiskId='1' Source='keyword/TTL.KWD' />
+                <File Id="TtlRl" Name="TTL.RL" DiskId='1' Source='keyword/TTL.RL' />
+                <File Id="UwscDic" Name="uwsc.dic" DiskId='1' Source='keyword/uwsc.dic' />
+                <File Id="UwscKwd" Name="uwsc.kwd" DiskId='1' Source='keyword/uwsc.kwd' />
+                <File Id="UwscRl" Name="uwsc.rl" DiskId='1' Source='keyword/uwsc.rl' />
+                <File Id="Uwsc2Kwd" Name="uwsc2.kwd" DiskId='1' Source='keyword/uwsc2.kwd' />
+                <File Id="Uwsc41Kwd" Name="uwsc41.kwd" DiskId='1' Source='keyword/uwsc41.kwd' />
+                <File Id="Uwsc42Kwd" Name="uwsc42.kwd" DiskId='1' Source='keyword/uwsc42.kwd' />
+                <File Id="VbKwd" Name="VB.KWD" DiskId='1' Source='keyword/VB.KWD' />
+                <File Id="Vb2Kwd" Name="vb2.kwd" DiskId='1' Source='keyword/vb2.kwd' />
+                <File Id="VbscriptKwd" Name="VBScript.kwd" DiskId='1' Source='keyword/VBScript.kwd' />
+                <File Id="VbAspKwd" Name="vb_asp.kwd" DiskId='1' Source='keyword/vb_asp.kwd' />
+                <File Id="VerilogKwd" Name="verilog.kwd" DiskId='1' Source='keyword/verilog.kwd' />
+                <File Id="WshKwd" Name="wsh.kwd" DiskId='1' Source='keyword/wsh.kwd' />
+                <File Id="XulAttrKwd" Name="xul-attr.kwd" DiskId='1' Source='keyword/xul-attr.kwd' />
+                <File Id="XulKwd" Name="xul.kwd" DiskId='1' Source='keyword/xul.kwd' />
+              </Component>
+            </Directory>
+
+            <Component Id='Manual'
+                       Guid='16A60EF1-6F86-4e9c-ABDE-6E0A0F84E24B'>
+              <File Id='Help' Name='sakura.chm' DiskId='1'
+                    Source='sakura.chm' KeyPath='yes'>
+              </File>
+            </Component>
+
+          </Directory>
+      </Directory>
+
+      <Directory Id="ProgramMenuFolder" Name="Programs">
+        <Directory Id="SakuraMenuDir" Name="サクラエディタ">
+        </Directory>
+      </Directory>
+      
+      <Directory Id="DesktopFolder" Name="Desktop" />
+      </Directory>
+
+      <DirectoryRef Id="SakuraMenuDir">
+        <Component Id="HelpShortcut" Guid="807FE9DB-43E9-4728-B3B7-51F384BAFD6B">
+            <Shortcut Id="HelpStartMenuShortcut" 
+                      Name="ヘルプ"
+                      Target="[INSTALLDIR]sakura.chm"
+                      WorkingDirectory="INSTALLDIR"/>
+            <RemoveFolder Id="SakuraMenuDir" On="uninstall"/>
+            <RegistryValue Root="HKCU" Key='Software\[Manufacturer]\[ProductName]' Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+        </Component>
+      </DirectoryRef>
+
+    <Feature Id='Complete' Title='サクラエディタ'
+             Description='完全パッケージ。' Display='expand'
+             Level='1' ConfigurableDirectory='INSTALLDIR'>
+      <Feature Id='MainProgram' Title='プログラム'
+               Description='サクラエディタ本体です。' Level='1'>
+        <ComponentRef Id='MainExecutable' />
+        <ComponentRef Id='HelpShortcut' />
+      </Feature>
+
+      <Feature Id='Regexp' Title='正規表現ライブラリ'
+               Description='正規表現ライブラリです。' Level='1' AllowAdvertise='no'>
+        <ComponentRef Id='RegexpLibrary' />
+      </Feature>
+
+      <Feature Id='Keywords' Title='キーワードファイル'
+               Description='各種言語のキーワードファイルです。' Level='1' AllowAdvertise='no'>
+        <ComponentRef Id='KeywordFiles' />
+      </Feature>
+
+      <Feature Id='Documentation' Title='ヘルプ'
+               Description='ヘルプファイルです。' Level='1' AllowAdvertise='no'>
+        <ComponentRef Id='Manual' />
+      </Feature>
+    </Feature>
+
+    <UIRef Id="WixUI_Mondo" />
+    <UIRef Id="WixUI_ErrorProgressText" />
+
+    <Icon Id="sakura.exe" SourceFile="sakura.exe" />
+    <WixVariable Id="WixUILicenseRtf" Value="LICENSE.rtf"/>
+  </Product>
+</Wix>
