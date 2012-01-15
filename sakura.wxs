@@ -5,7 +5,7 @@
            Id='2462A070-3DBB-11E1-9683-93D84724019B'
            UpgradeCode='F3BA9C9D-4450-4d82-8BDD-87E83D2E0BE1'
            Language='1041' Codepage='932'
-           Version='2.0.4' Manufacturer='サクラエディタ開発チーム'>
+           Version='2.0.4.0' Manufacturer='サクラエディタ開発チーム'>
 
     <Package Id='*' Keywords='インストーラ'
              Description="sakura editor(サクラエディタ) インストーラ"
@@ -55,6 +55,61 @@
               <File Id='BsdLicense' Name='bsd_license.txt' DiskId='1' Source='bsd_license.txt' />
             </Component>
 
+            <Directory Id='TypeSettingsDIR' Name='TypeSettings'>
+              <Directory Id='RubyTypeSettingsDIR' Name='Ruby'>
+                <Component Id='RubyTypeSettingFiles'
+                         Guid='66ea5b3a-eabb-4507-9450-c5c8fdc427a6'>
+                  <File Id="RubyIni" Name="Ruby.ini" DiskId='1' Source='TypeSettings/Ruby/Ruby.ini' />
+                  <File Id="RubyReadmeTxt" Name="Ruby-readme.txt" DiskId='1' Source='keyword/Ruby-readme.txt' />
+                  <File Id="RubyCol" Name="Ruby.col" DiskId='1' Source='keyword/Ruby.col' />
+                  <File Id="RubyHkn" Name="Ruby.hkn" DiskId='1' Source='keyword/Ruby.hkn' />
+                  <File Id="RubyRkw" Name="Ruby.rkw" DiskId='1' Source='keyword/Ruby.rkw' />
+                  <File Id="RubyRule" Name="Ruby.rule" DiskId='1' Source='keyword/Ruby.rule' />
+                  <File Id="Ruby1Kwd" Name="Ruby1.kwd" DiskId='1' Source='keyword/Ruby1.kwd' />
+                  <File Id="Ruby2Kwd" Name="Ruby2.kwd" DiskId='1' Source='keyword/Ruby2.kwd' />
+                  <File Id="Ruby3Kwd" Name="Ruby3.kwd" DiskId='1' Source='keyword/Ruby3.kwd' />
+                  <File Id="Ruby4Kwd" Name="Ruby4.kwd" DiskId='1' Source='keyword/Ruby4.kwd' />
+                </Component>
+              </Directory>
+              
+              <Directory Id='JavascriptTypeSettingsDIR' Name='javascript'>
+                <Component Id='JavascriptTypeSettingsFiles'
+                         Guid='73a2e22d-4474-47db-a703-344181407159'>
+                  <File Id="javascriptIni" Name="javascript.ini" DiskId='1' Source='TypeSettings/javascript/javascript.ini' />
+                  <File Id="javascriptKwd" Name="javascript.kwd" DiskId='1' Source='keyword/javascript.kwd' />
+                </Component>
+              </Directory>
+              
+              <Directory Id='CSS2TypeSettingsDIR' Name='CSS2'>
+                <Component Id='CSS2TypeSettingsFiles'
+                         Guid='7e1624cd-0d9a-4d22-9394-b3b8bf578f48'>
+                  <File Id="Css2GplTxt" Name="CSS2-GPL.txt" DiskId='1' Source='keyword/CSS2-GPL.txt' />
+                  <File Id="Css2ReadmeTxt" Name="CSS2-readme.txt" DiskId='1' Source='keyword/CSS2-readme.txt' />
+                  <File Id="Css2InputKwd" Name="CSS2.input.kwd" DiskId='1' Source='keyword/CSS2.input.kwd' />
+                  <File Id="Css2Khp" Name="CSS2.khp" DiskId='1' Source='keyword/CSS2.khp' />
+                  <File Id="Css2Kwd" Name="CSS2.kwd" DiskId='1' Source='keyword/CSS2.kwd' />
+                  <File Id="Css2Ini" Name="CSS2.ini" DiskId='1' Source='TypeSettings/CSS2/CSS2.ini' />
+                </Component>
+              </Directory>
+              
+              <Directory Id='PythonTypeSettingsDIR' Name='Python'>
+                <Component Id='PythonTypeSettingsFiles'
+                         Guid='d2539939-b62d-4c2c-9761-159cc3f28ece'>
+                  <File Id="PythonKwd" Name="Python.kwd" DiskId='1' Source='keyword/python_2.5.kwd' />
+                  <File Id="PythonIni" Name="Python.ini" DiskId='1' Source='TypeSettings/Python/Python.ini' />
+                </Component>
+              </Directory>
+
+              <Directory Id='PHPTypeSettingsDIR' Name='PHP'>
+                <Component Id='PHPTypeSettingsFiles'
+                         Guid='df909ee4-66e4-4118-9a00-613ed9c7ea6b'>
+                  <File Id="PhpKhp" Name="php.khp" DiskId='1' Source='keyword/php.khp' />
+                  <File Id="PhpKwd" Name="PHP.KWD" DiskId='1' Source='keyword/PHP.KWD' />
+                  <File Id="PhpIni" Name="PHP.ini" DiskId='1' Source='TypeSettings/PHP/PHP.ini' />
+                </Component>
+              </Directory>
+            </Directory>
+                       
             <Directory Id='KeywordDIR' Name='keyword'>
               <Component Id='KeywordFiles'
                        Guid='426ED976-877C-4b5e-A252-35A8284B3B95'>
@@ -79,11 +134,6 @@
                 <File Id="CorbaKwd" Name="corba.kwd" DiskId='1' Source='keyword/corba.kwd' />
                 <File Id="CppKwd" Name="cpp.kwd" DiskId='1' Source='keyword/cpp.kwd' />
                 <File Id="CsharpKwd" Name="csharp.kwd" DiskId='1' Source='keyword/csharp.kwd' />
-                <File Id="Css2GplTxt" Name="CSS2-GPL.txt" DiskId='1' Source='keyword/CSS2-GPL.txt' />
-                <File Id="Css2ReadmeTxt" Name="CSS2-readme.txt" DiskId='1' Source='keyword/CSS2-readme.txt' />
-                <File Id="Css2InputKwd" Name="CSS2.input.kwd" DiskId='1' Source='keyword/CSS2.input.kwd' />
-                <File Id="Css2Khp" Name="CSS2.khp" DiskId='1' Source='keyword/CSS2.khp' />
-                <File Id="Css2Kwd" Name="CSS2.kwd" DiskId='1' Source='keyword/CSS2.kwd' />
                 <File Id="DKwd" Name="d.kwd" DiskId='1' Source='keyword/d.kwd' />
                 <File Id="EcmascriptKwd" Name="ecmascript.kwd" DiskId='1' Source='keyword/ecmascript.kwd' />
                 <File Id="HspCol" Name="HSP.col" DiskId='1' Source='keyword/HSP.col' />
@@ -94,7 +144,6 @@
                 <File Id="HspRl" Name="HSP.RL" DiskId='1' Source='keyword/HSP.RL' />
                 <File Id="HtmlKwd" Name="html.kwd" DiskId='1' Source='keyword/html.kwd' />
                 <File Id="JavaKwd" Name="java.kwd" DiskId='1' Source='keyword/java.kwd' />
-                <File Id="JavascriptKwd" Name="JavaScript.kwd" DiskId='1' Source='keyword/JavaScript.kwd' />
                 <File Id="Mathml2Kwd" Name="mathml2.kwd" DiskId='1' Source='keyword/mathml2.kwd' />
                 <File Id="MovabletypeKwd" Name="movabletype.kwd" DiskId='1' Source='keyword/movabletype.kwd' />
                 <File Id="OptimaReadmeTxt" Name="optima-readme.txt" DiskId='1' Source='keyword/optima-readme.txt' />
@@ -104,8 +153,6 @@
                 <File Id="PerlKwd" Name="Perl.kwd" DiskId='1' Source='keyword/Perl.kwd' />
                 <File Id="PerlRkw" Name="Perl.rkw" DiskId='1' Source='keyword/Perl.rkw' />
                 <File Id="PerlvarKwd" Name="Perlvar.kwd" DiskId='1' Source='keyword/Perlvar.kwd' />
-                <File Id="PhpKhp" Name="php.khp" DiskId='1' Source='keyword/php.khp' />
-                <File Id="PhpKwd" Name="PHP.KWD" DiskId='1' Source='keyword/PHP.KWD' />
                 <File Id="PicCcsCKwd" Name="PIC_CCS-C.kwd" DiskId='1' Source='keyword/PIC_CCS-C.kwd' />
                 <File Id="PicCcsCTxt" Name="PIC_CCS-C.txt" DiskId='1' Source='keyword/PIC_CCS-C.txt' />
                 <File Id="PliKwd" Name="pli.kwd" DiskId='1' Source='keyword/pli.kwd' />
@@ -117,17 +164,7 @@
                 <File Id="PukiwikiCol" Name="pukiwiki.col" DiskId='1' Source='keyword/pukiwiki.col' />
                 <File Id="PukiwikiKwd" Name="pukiwiki.kwd" DiskId='1' Source='keyword/pukiwiki.kwd' />
                 <File Id="PukiwikiRkw" Name="pukiwiki.rkw" DiskId='1' Source='keyword/pukiwiki.rkw' />
-                <File Id="Python25Kwd" Name="python_2.5.kwd" DiskId='1' Source='keyword/python_2.5.kwd' />
                 <File Id="RtfKwd" Name="rtf.kwd" DiskId='1' Source='keyword/rtf.kwd' />
-                <File Id="RubyReadmeTxt" Name="Ruby-readme.txt" DiskId='1' Source='keyword/Ruby-readme.txt' />
-                <File Id="RubyCol" Name="Ruby.col" DiskId='1' Source='keyword/Ruby.col' />
-                <File Id="RubyHkn" Name="Ruby.hkn" DiskId='1' Source='keyword/Ruby.hkn' />
-                <File Id="RubyRkw" Name="Ruby.rkw" DiskId='1' Source='keyword/Ruby.rkw' />
-                <File Id="RubyRule" Name="Ruby.rule" DiskId='1' Source='keyword/Ruby.rule' />
-                <File Id="Ruby1Kwd" Name="Ruby1.kwd" DiskId='1' Source='keyword/Ruby1.kwd' />
-                <File Id="Ruby2Kwd" Name="Ruby2.kwd" DiskId='1' Source='keyword/Ruby2.kwd' />
-                <File Id="Ruby3Kwd" Name="Ruby3.kwd" DiskId='1' Source='keyword/Ruby3.kwd' />
-                <File Id="Ruby4Kwd" Name="Ruby4.kwd" DiskId='1' Source='keyword/Ruby4.kwd' />
                 <File Id="ShellKwd" Name="SHELL.kwd" DiskId='1' Source='keyword/SHELL.kwd' />
                 <File Id="Systemc201Kwd" Name="systemc_2_0_1.kwd" DiskId='1' Source='keyword/systemc_2_0_1.kwd' />
                 <File Id="SMacKwd" Name="S_MAC.KWD" DiskId='1' Source='keyword/S_MAC.KWD' />
@@ -187,10 +224,10 @@
       </DirectoryRef>
 
     <Feature Id='Complete' Title='サクラエディタ'
-             Description='完全パッケージ。' Display='expand'
+             Description='パッケージ全体' Display='expand'
              Level='1' ConfigurableDirectory='INSTALLDIR'>
-      <Feature Id='MainProgram' Title='プログラム'
-               Description='サクラエディタ本体です。' Level='1'>
+      <Feature Id='MainProgram' Title='実行ファイル'
+               Description='サクラエディタ実行ファイルです。' Level='1'>
         <ComponentRef Id='MainExecutable' />
         <ComponentRef Id='HelpShortcut' />
       </Feature>
@@ -200,8 +237,37 @@
         <ComponentRef Id='RegexpLibrary' />
       </Feature>
 
+    <Feature Id='TypeSettings' Title='タイプ別設定'
+             Description='ファイル形式ごとの表示入力支援機能です。' Display='expand' Level='1'>
+      <Feature Id='RubyTypeSetting' Title='Ruby設定ファイル'
+               Description='Ruby の設定ファイルです。' Level='1' AllowAdvertise='no'>
+        <ComponentRef Id='RubyTypeSettingFiles' />
+      </Feature>
+      
+      <Feature Id='JavascriptTypeSetting' Title='javascript設定ファイル'
+               Description='javascript の設定ファイルです。' Level='1' AllowAdvertise='no'>
+        <ComponentRef Id='JavascriptTypeSettingsFiles' />
+      </Feature>
+      
+      <Feature Id='CSS2TypeSetting' Title='CSS2設定ファイル'
+               Description='CSS2 の設定ファイルです。' Level='1' AllowAdvertise='no'>
+        <ComponentRef Id='CSS2TypeSettingsFiles' />
+      </Feature>
+      
+      <Feature Id='PythonTypeSetting' Title='Python設定ファイル'
+               Description='Python の設定ファイルです。' Level='1' AllowAdvertise='no'>
+        <ComponentRef Id='PythonTypeSettingsFiles' />
+      </Feature>
+      
+      <Feature Id='PHPTypeSetting' Title='PHP設定ファイル'
+               Description='PHP の設定ファイルです。' Level='1' AllowAdvertise='no'>
+        <ComponentRef Id='PHPTypeSettingsFiles' />
+      </Feature>
+      
+      </Feature>
+      
       <Feature Id='Keywords' Title='キーワードファイル'
-               Description='各種言語のキーワードファイルです。' Level='1' AllowAdvertise='no'>
+               Description='各種言語のキーワードファイルです。' Level='100' AllowAdvertise='no'>
         <ComponentRef Id='KeywordFiles' />
       </Feature>
 
