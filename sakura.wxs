@@ -2,10 +2,10 @@
 <Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'>
 
   <Product Name='sakura editor （サクラエディタ）'
-           Id='4A042C56-3B68-4768-A08B-1EACD526BDB1'
+           Id='2462A070-3DBB-11E1-9683-93D84724019B'
            UpgradeCode='F3BA9C9D-4450-4d82-8BDD-87E83D2E0BE1'
            Language='1041' Codepage='932'
-           Version='2.0.3.1' Manufacturer='サクラエディタ開発チーム'>
+           Version='2.0.4' Manufacturer='サクラエディタ開発チーム'>
 
     <Package Id='*' Keywords='インストーラ'
              Description="sakura editor(サクラエディタ) インストーラ"
@@ -18,6 +18,14 @@
 
     <Property Id='ARPPRODUCTICON'>sakura.exe</Property>
     <Property Id='ARPURLINFOABOUT'>http://sakura-editor.sourceforge.net/</Property>
+
+    <Upgrade Id='F3BA9C9D-4450-4d82-8BDD-87E83D2E0BE1'>
+      <UpgradeVersion OnlyDetect='yes' Property='NEWERFOUND'
+                      Minimum='2.0.4.0' IncludeMinimum='no' />
+      <UpgradeVersion OnlyDetect='no' Property='PREVIOUSFOUND'
+                      Minimum='2.0.0.0' IncludeMinimum='yes'
+                      Maximum='2.0.4.0' IncludeMaximum='no' />
+    </Upgrade>
 
     <Directory Id='TARGETDIR' Name='SourceDir'>
      <Directory Id='ProgramFilesFolder' Name='PFiles'>
@@ -205,6 +213,34 @@
 
     <UIRef Id="WixUI_Mondo" />
     <UIRef Id="WixUI_ErrorProgressText" />
+    <UI>
+      <Dialog Id="NewerFoundDlg" Width="270" Height="105"
+              Title="[ProductName] セットアップ" NoMinimize="yes">
+        <Control Id="MessageText" Type="Text"
+                 X="48" Y="15" Width="205" Height="60" TabSkip="no"
+                 Text="[ProductName] の新しいバージョンがすでにインストールされています。" />
+        <Control Id="Y" Type="PushButton"
+                 X="200" Y="80" Width="56" Height="17" TabSkip="yes"
+                 Text="!(loc.WixUIOK)">
+          <Publish Event="EndDialog" Value="Return">1</Publish>
+        </Control>
+
+        <Control Id="NewerFoundDlgIcon"
+                 Type="Icon" X="15" Y="15" Width="24" Height="24"
+                 ToolTip="!(loc.ErrorDlgErrorIconTooltip)" FixedSize="yes" IconSize="32"
+                 Text="!(loc.ErrorDlgErrorIcon)" />
+      </Dialog>
+    </UI>
+
+    <CustomActionRef Id="WixExitEarlyWithSuccess"/> <!-- WixUtilExtension が必要 -->
+    <InstallUISequence>
+      <Show Dialog='NewerFoundDlg' After='FindRelatedProducts'>NEWERFOUND</Show>
+      <Custom Action='WixExitEarlyWithSuccess' After='NewerFoundDlg'>NEWERFOUND</Custom>
+    </InstallUISequence>
+    <InstallExecuteSequence>
+      <Custom Action='WixExitEarlyWithSuccess' After='FindRelatedProducts'>NEWERFOUND</Custom>
+      <RemoveExistingProducts After="InstallFinalize" />
+    </InstallExecuteSequence>
 
     <Icon Id="sakura.exe" SourceFile="sakura.exe" />
     <WixVariable Id="WixUILicenseRtf" Value="LICENSE.rtf"/>

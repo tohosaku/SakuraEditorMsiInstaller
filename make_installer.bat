@@ -7,4 +7,6 @@ if exist sakura.wixobj del /Q sakura.wixobj
 if exist sakura.wixpdb del /Q sakura.wixpdb
 
 candle sakura.wxs
-light  -ext WixUIExtension -cultures:ja-jp sakura.wixobj
+light  -ext WixUIExtension -ext WixUtilExtension -cultures:ja-jp sakura.wixobj
+
+pause
