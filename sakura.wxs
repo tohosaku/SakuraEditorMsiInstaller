@@ -55,11 +55,11 @@
               <File Id='BsdLicense' Name='bsd_license.txt' DiskId='1' Source='bsd_license.txt' />
             </Component>
 
-            <Directory Id='TypeSettingsDIR' Name='TypeSettings'>
+            <Directory Id='TypeSettingsDIR' Name='types'>
               <Directory Id='RubyTypeSettingsDIR' Name='Ruby'>
                 <Component Id='RubyTypeSettingFiles'
                          Guid='66ea5b3a-eabb-4507-9450-c5c8fdc427a6'>
-                  <File Id="RubyIni" Name="Ruby.ini" DiskId='1' Source='TypeSettings/Ruby/Ruby.ini' />
+                  <File Id="RubyIni" Name="Ruby.ini" DiskId='1' Source='types/Ruby/Ruby.ini' />
                   <File Id="RubyReadmeTxt" Name="Ruby-readme.txt" DiskId='1' Source='keyword/Ruby-readme.txt' />
                   <File Id="RubyCol" Name="Ruby.col" DiskId='1' Source='keyword/Ruby.col' />
                   <File Id="RubyHkn" Name="Ruby.hkn" DiskId='1' Source='keyword/Ruby.hkn' />
@@ -75,7 +75,7 @@
               <Directory Id='JavascriptTypeSettingsDIR' Name='javascript'>
                 <Component Id='JavascriptTypeSettingsFiles'
                          Guid='73a2e22d-4474-47db-a703-344181407159'>
-                  <File Id="javascriptIni" Name="javascript.ini" DiskId='1' Source='TypeSettings/javascript/javascript.ini' />
+                  <File Id="javascriptIni" Name="javascript.ini" DiskId='1' Source='types/javascript/javascript.ini' />
                   <File Id="javascriptKwd" Name="javascript.kwd" DiskId='1' Source='keyword/javascript.kwd' />
                 </Component>
               </Directory>
@@ -88,7 +88,7 @@
                   <File Id="Css2InputKwd" Name="CSS2.input.kwd" DiskId='1' Source='keyword/CSS2.input.kwd' />
                   <File Id="Css2Khp" Name="CSS2.khp" DiskId='1' Source='keyword/CSS2.khp' />
                   <File Id="Css2Kwd" Name="CSS2.kwd" DiskId='1' Source='keyword/CSS2.kwd' />
-                  <File Id="Css2Ini" Name="CSS2.ini" DiskId='1' Source='TypeSettings/CSS2/CSS2.ini' />
+                  <File Id="Css2Ini" Name="CSS2.ini" DiskId='1' Source='types/CSS2/CSS2.ini' />
                 </Component>
               </Directory>
               
@@ -96,7 +96,7 @@
                 <Component Id='PythonTypeSettingsFiles'
                          Guid='d2539939-b62d-4c2c-9761-159cc3f28ece'>
                   <File Id="PythonKwd" Name="Python.kwd" DiskId='1' Source='keyword/python_2.5.kwd' />
-                  <File Id="PythonIni" Name="Python.ini" DiskId='1' Source='TypeSettings/Python/Python.ini' />
+                  <File Id="PythonIni" Name="Python.ini" DiskId='1' Source='types/Python/Python.ini' />
                 </Component>
               </Directory>
 
@@ -105,7 +105,7 @@
                          Guid='df909ee4-66e4-4118-9a00-613ed9c7ea6b'>
                   <File Id="PhpKhp" Name="php.khp" DiskId='1' Source='keyword/php.khp' />
                   <File Id="PhpKwd" Name="PHP.KWD" DiskId='1' Source='keyword/PHP.KWD' />
-                  <File Id="PhpIni" Name="PHP.ini" DiskId='1' Source='TypeSettings/PHP/PHP.ini' />
+                  <File Id="PhpIni" Name="PHP.ini" DiskId='1' Source='types/PHP/PHP.ini' />
                 </Component>
               </Directory>
             </Directory>
