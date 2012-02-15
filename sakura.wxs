@@ -75,8 +75,13 @@
               <Directory Id='JavascriptTypeSettingsDIR' Name='javascript'>
                 <Component Id='JavascriptTypeSettingsFiles'
                          Guid='73a2e22d-4474-47db-a703-344181407159'>
-                  <File Id="javascriptIni" Name="javascript.ini" DiskId='1' Source='types/javascript/javascript.ini' />
-                  <File Id="javascriptKwd" Name="javascript.kwd" DiskId='1' Source='keyword/javascript.kwd' />
+                  <File Id="javascriptIni"  Name="javascript.ini"  DiskId='1' Source='types/javascript/javascript.ini' />
+                  <File Id="javascript1Kwd" Name="javascript1.kwd" DiskId='1' Source='types/javascript/javascript1.kwd' />
+                  <File Id="javascript2Kwd" Name="javascript2.kwd" DiskId='1' Source='types/javascript/javascript2.kwd' />
+                  <File Id="javascript3Kwd" Name="javascript3.kwd" DiskId='1' Source='types/javascript/javascript3.kwd' />
+                  <File Id="EMCAScriptKwd"  Name="EMCAScript.kwd"  DiskId='1' Source='types/javascript/EMCAScript.kwd' />
+                  <File Id="javascriptRule" Name="javascript.rule" DiskId='1' Source='types/javascript/javascript.rule' />
+                  <File Id="javascriptHkn"  Name="javascript.hkn"  DiskId='1' Source='types/javascript/javascript.hkn' />
                 </Component>
               </Directory>
               

@@ -1,0 +1,18 @@
+﻿// javascript2 キーワード定義ファイル
+// CASE=True
+
+break
+case
+catch
+continue
+default
+do
+else
+finally
+for
+if
+return
+switch
+throw
+try
+while

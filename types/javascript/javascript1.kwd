@@ -1,0 +1,16 @@
+﻿// javascript1 キーワード定義ファイル
+// CASE=True
+
+delete
+false
+function
+in
+instanceof
+new
+null
+this
+true
+typeof
+var
+void
+with
