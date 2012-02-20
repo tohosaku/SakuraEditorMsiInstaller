@@ -88,11 +88,11 @@
               <Directory Id='CSS2TypeSettingsDIR' Name='CSS2'>
                 <Component Id='CSS2TypeSettingsFiles'
                          Guid='7e1624cd-0d9a-4d22-9394-b3b8bf578f48'>
-                  <File Id="Css2GplTxt" Name="CSS2-GPL.txt" DiskId='1' Source='keyword/CSS2-GPL.txt' />
-                  <File Id="Css2ReadmeTxt" Name="CSS2-readme.txt" DiskId='1' Source='keyword/CSS2-readme.txt' />
-                  <File Id="Css2InputKwd" Name="CSS2.input.kwd" DiskId='1' Source='keyword/CSS2.input.kwd' />
-                  <File Id="Css2Khp" Name="CSS2.khp" DiskId='1' Source='keyword/CSS2.khp' />
-                  <File Id="Css2Kwd" Name="CSS2.kwd" DiskId='1' Source='keyword/CSS2.kwd' />
+                  <File Id="Css2GplTxt" Name="CSS2-GPL.txt" DiskId='1' Source='types/CSS2/CSS2-GPL.txt' />
+                  <File Id="Css2ReadmeTxt" Name="CSS2-readme.txt" DiskId='1' Source='types/CSS2/CSS2-readme.txt' />
+                  <File Id="Css2InputKwd" Name="CSS2.input.kwd" DiskId='1' Source='types/CSS2/CSS2.input.kwd' />
+                  <File Id="Css2Khp" Name="CSS2.khp" DiskId='1' Source='types/CSS2/CSS2.khp' />
+                  <File Id="Css2Kwd" Name="CSS2.kwd" DiskId='1' Source='types/CSS2/CSS2.kwd' />
                   <File Id="Css2Ini" Name="CSS2.ini" DiskId='1' Source='types/CSS2/CSS2.ini' />
                 </Component>
               </Directory>
