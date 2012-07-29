@@ -5,7 +5,7 @@
            Id='2462A070-3DBB-11E1-9683-93D84724019B'
            UpgradeCode='F3BA9C9D-4450-4d82-8BDD-87E83D2E0BE1'
            Language='1041' Codepage='932'
-           Version='2.0.4.0' Manufacturer='サクラエディタ開発チーム'>
+           Version='2.0.5.0' Manufacturer='サクラエディタ開発チーム'>
 
     <Package Id='*' Keywords='インストーラ'
              Description="sakura editor(サクラエディタ) インストーラ"
@@ -21,10 +21,10 @@
 
     <Upgrade Id='F3BA9C9D-4450-4d82-8BDD-87E83D2E0BE1'>
       <UpgradeVersion OnlyDetect='yes' Property='NEWERFOUND'
-                      Minimum='2.0.4.0' IncludeMinimum='no' />
+                      Minimum='2.0.5.0' IncludeMinimum='no' />
       <UpgradeVersion OnlyDetect='no' Property='PREVIOUSFOUND'
                       Minimum='2.0.0.0' IncludeMinimum='yes'
-                      Maximum='2.0.4.0' IncludeMaximum='no' />
+                      Maximum='2.0.5.0' IncludeMaximum='no' />
     </Upgrade>
 
     <Directory Id='TARGETDIR' Name='SourceDir'>
@@ -82,6 +82,14 @@
                   <File Id="EMCAScriptKwd"  Name="EMCAScript.kwd"  DiskId='1' Source='types/javascript/EMCAScript.kwd' />
                   <File Id="javascriptRule" Name="javascript.rule" DiskId='1' Source='types/javascript/javascript.rule' />
                   <File Id="javascriptHkn"  Name="javascript.hkn"  DiskId='1' Source='types/javascript/javascript.hkn' />
+                </Component>
+              </Directory>
+              
+              <Directory Id='CoffeeScriptTypeSettingsDIR' Name='coffeescript'>
+                <Component Id='CoffeeScriptTypeSettingsFiles'
+                         Guid='B32D47F4-448C-454c-BB68-302E20095590'>
+                  <File Id="CoffeeScriptKwd" Name="CoffeeScript.kwd" DiskId='1' Source='types/coffeescript/CoffeeScript.kwd' />
+                  <File Id="coffeescriptIni" Name="coffeescript.ini" DiskId='1' Source='types/coffeescript/coffeescript.ini' />
                 </Component>
               </Directory>
               
@@ -252,6 +260,11 @@
       <Feature Id='JavascriptTypeSetting' Title='javascript設定ファイル'
                Description='javascript の設定ファイルです。' Level='1' AllowAdvertise='no'>
         <ComponentRef Id='JavascriptTypeSettingsFiles' />
+      </Feature>
+      
+      <Feature Id='CoffeeScriptTypeSetting' Title='coffeescript設定ファイル'
+               Description='coffeescript の設定ファイルです。' Level='1' AllowAdvertise='no'>
+        <ComponentRef Id='CoffeeScriptTypeSettingsFiles' />
       </Feature>
       
       <Feature Id='CSS2TypeSetting' Title='CSS2設定ファイル'

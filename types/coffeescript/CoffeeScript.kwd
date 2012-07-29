@@ -1,0 +1,19 @@
+﻿// CoffeeScript キーワード定義ファイル
+// CASE=False
+
+catch
+class
+else
+extends
+finally
+for
+if
+loop
+new
+switch
+then
+this
+try
+unless
+when
+while
